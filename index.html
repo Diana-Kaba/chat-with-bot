@@ -16,15 +16,15 @@
         "С Вами очень приятно общаться!",
         "До свидания, рад был пообщаться!",
       ];
-      let q = prompt(
-        "Давай начнем диалог (если хотите завершить диалог напишите: 'До свидания!'):"
-      );
-      while (q) {
+
+      while (true) {
+        let q = prompt(
+          "Давай начнем диалог (если хотите завершить диалог напишите: 'До свидания!'):"
+        );
         let random = Math.floor(Math.random() * answer.length);
         let conclusion = answer[random];
         alert(conclusion);
-        continue;
-        if (q == "До свидания!") {
+        if (q == "До свидания!" || q == null) {
           alert(answer[5]);
           break;
         }
